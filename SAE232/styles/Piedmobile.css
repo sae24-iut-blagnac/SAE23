@@ -1,0 +1,52 @@
+footer /* pieds de page*/
+{
+  position: relative;
+  left: 50;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 35px;
+  background-color: #ffa31a;
+  color: #292929;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+footer ul li
+{
+  float: left;
+  width:33%;
+  list-style-type: none;
+}
+
+footer ul li:first-child
+{
+  margin-left : 0x
+}
+
+footer ul li:last-child
+{
+
+ margin-right : 0px
+};
+}
+footer ul li a:last-child {
+color: #ffffff; }
+
+section {
+margin: 0px }
+
+h1
+{text-align: center;}
+
+footer ul li a:last-child {
+color: #ffffff; }
+
+@media screen and (max-width: 600px) 
+{
+	header { font-size: 25px;
+}	
+footer { padding-bottom: 10px;
+font-size: 7px;
+}
+}

@@ -1,0 +1,31 @@
+section
+{
+  padding-top: 35px;
+}
+
+img {
+	
+	max-width: 50%;
+	height: auto;
+	transition: transform 0.1s
+}
+h6 {
+text-align: center  /* pour que l'image soit centré */
+}
+
+img:hover /* quand on passe la souris sur l'image */
+{
+transform: scale(1.1); /* taux d'agrandissement */
+}
+@media screen and (max-width: 640px) 
+{
+	img {
+	
+	max-width: 75%;
+	height: auto; }
+
+img:hover /* quand on passe la souris sur l'image */
+{
+transform: scale(1); /* taux d'agrandissement */
+}	
+}

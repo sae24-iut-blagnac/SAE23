@@ -1,0 +1,231 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #292929;/*Couleur de fond de la page web */
+  color: #cdcdcd; /*Couleur */
+  font-family: arial; /*Police d'écriture de la page web*/
+}
+header
+{
+   text-align: center; /*Mettre le titre "Portfolio" au centre*/
+   font-size: 36px;
+   font-weight: bold ;   /*Taille police d'écriture*/
+   color: #292929; /*Couleur du texte ici Blanc*/
+   padding:20px;  /*Hauteur de l'en-tête*/
+   background-color: #ffa31a;/*Couleur de fond du bandeau d'en-tête*/
+}
+section {
+margin: 15px  }
+p {
+  text-indent: 1.5%;
+  font-size: 18px;
+}
+h1
+{text-align: center;
+font-size: 25px;
+font-weight: bold } 
+h2
+{
+font-size: 25px;
+font-weight: bold } 
+
+
+
+#menu-hamburger
+{
+  display: block;/* type d'affichage utilisée block*/
+  position: absolute;/* position */
+  top: 35px;/* Deplacement du menu hamburger vers le haut ou vers le bas*/
+  left: 50px;/* Deplacement du menu hamburger de 25px vers la droite*/
+
+  z-index: 1;/*précise l'empilement des différents blocs de la page web*/
+  
+
+}
+
+#menu-hamburger a
+{
+  text-decoration: none; /* Les titres dans le menu non pas de trait (pas souligné ect) */
+  color: #292929 ; /* couleur titres des menus */
+  transition: color 0.3s ease; /* Temps que la couleur des titres du menu change quand on passe la souris dessus ici il faut attendre 0.3s*/
+}
+
+#menu-hamburger a:hover
+{
+  color: #ffa31a; /*Couleur des titres du menu, ici quand la souris passe sur un des titres le titre passe en marron */
+}
+
+
+#menu-hamburger input /* zone cliquable*/
+{
+  display: block;/* type d'affichage utilisée block*/
+  width: 40px;/* largeur du block */
+  height: 33px;/* taille zone cliquable hauteur*/
+  position: absolute;/* position absolue ne change pas*/
+  top: -7px;/*zone cliquable à partir de 5px vers la droite en partant de la gauche*/
+  left: -7px; /*zone cliquable à partir de 8px vers le bas en partant d'en haut*/
+  cursor: pointer;/* la petite mains apparait quand notre souris passe sur le block */
+  
+  opacity: 0; /*Cache la checkbox (la rend invisible) */
+  z-index: 2; /*précise l'empilement des différents blocs de la page web ici la checkbox passe au dessus du menu hamburger*/
+  
+}
+
+/*Juste pour le menu hamburger (les 3 tranches)*/
+#menu-hamburger span
+{
+  display: block;/* largeur des tranches qui fond le hamburger */
+  width: 33px; /* largeur des tranches qui fond le hamburger */
+  height: 4px;/* hauteur des tranches qui fond le hamburger */
+  margin-bottom: 5px;/* espacement entre les tranches */
+  position: relative;
+  
+  background: #000000;/* couleur des tranches ici blanc*/
+  border-radius: 3px;/* arrondies des coins des tranches*/
+  z-index: 1;/*précise l'empilement des différents blocs de la page web*/
+  
+  transform-origin: 4px 0px;/* transformation des tranches en une croix ici c'est ou vont ce retrouver les bouts de tranches pour faire la croix*/
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), /* temps de transition pour que les tranches forme la croix*/
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), /* temps que les tranches qui forment la croix change de couleur est passe ici au noir*/
+                opacity 0.55s ease; /*temps que la tranche du milieu "disparaisse"*/
+}
+
+#menu-hamburger span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menu-hamburger span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+/*sert à ce que la croix soit uniforme*/
+
+#menu-hamburger input:checked ~ span/* Transformez les tranches 1 et 3 de l'hamburger par une croix après le click*/
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);/*tranche 1 rotation et transalation*/
+  background: #232323; /* couleur de la croix */
+}
+
+
+#menu-hamburger input:checked ~ span:nth-last-child(3)/*On cache la "tranche" du milieu.*/
+{
+  opacity: 0;/* devient transparent*/
+  transform: rotate(0deg) scale(0.2, 0.2);/* pas de rotation mais la tranche retréci pour permettre une harmonisation quand la croix ce forme */
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menu-hamburger input:checked ~ span:nth-last-child(2)/*La dernière "tranche" va aller dans l'autre sens*/
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*Positionnement absolu en haut à gauche de l'écran*/
+#menu
+{
+  position: absolute;
+  width: 125px;/* largeur du menu déroulant*/
+  margin: -100px 0 0 -55px;/* position en hauteur du menu déroulant et position sur le coté du menu déroulant*/
+  padding: 30px;/* espace entre la page web et le menu quand il est sortie */
+  padding-top: 125px;/* hauteur au ce situe le debut des titres (si on augmente le titre accueil va descendre) */
+  
+  background: #ffffff;
+  list-style-type: none;/*aucun marqueur d'item de liste */
+  transform: translate(-100%, 0);/* ou ce situe le menu quand il n'est pas déroulé*/
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);/* retour en hamburger*/
+}
+
+#menu li
+{
+  padding: 15px 0; /* écart entre les différents titres du menu */
+  font-size: 22px;/* taille police des titres*/
+}
+
+/* Glissement par la gauche.*/
+#menu-hamburger input:checked ~ ul
+{
+  transform: none;
+}
+table
+{
+	width: 700px;
+	border-collapse : collapse;
+	margin: auto ;
+	text-align:center;
+	margin-bottom: 50px;
+}
+/* Titre du tableau  */
+caption 
+{
+	  border: 1px solid black;
+      caption-side:top;
+      text-align:center;
+      color:#ffffff;
+	  background-color: #000000;
+	  padding: 20px;
+}
+
+tbody td:nth-child(odd) 
+{
+  color: #ffa31a;
+  background-color: #ffffff;
+  border: 1px solid black;
+  padding: 20px;
+}
+tbody td:nth-child(even) 
+{
+  color: #ffa31a;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid black;
+  padding: 20px;
+}
+tbody th:nth-child(even)  
+{
+	color: white;
+    background-color: #808080;
+	border: 1px solid black;
+	padding: 20px;
+}
+tbody th:nth-child(odd) 
+{
+	color: white;
+    background-color: #808080;
+	border: 1px solid black;
+	padding: 20px;
+}
+/* fin tableau*/
+
+section
+{
+  padding-top: 15px;
+}
+
+img {
+	
+	max-width: 75%;
+	height: auto;
+	
+}
+h6 {
+text-align: center  /* pour que l'image soit centré */
+}
+
+@media screen and (max-width: 720px) 
+{
+section	img {
+	
+	max-width: 75%;
+	height: auto; }
+
+section img:hover /* quand on passe la souris sur l'image */
+{
+transform: scale(1); /* taux d'agrandissement */
+}	
+}

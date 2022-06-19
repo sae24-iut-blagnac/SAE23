@@ -1,0 +1,65 @@
+footer /* pieds de page*/
+{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 15px;
+  background-color: #ffa31a;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  
+}
+h4
+{
+display block;
+padding: 0.6em;
+border-radius:10px;
+background : #ffffff;
+border : 5px solid #000000;
+width : 50px;
+font-size: 20px;
+
+}
+h5
+{
+display block;
+padding: 0.6em;
+border-radius:10px;
+background : #ffffff;
+border : 5px solid #000000;
+width : 120px;
+font-size: 20px;
+text-align : center;
+
+}
+
+
+footer ul li
+{
+  float: left;
+  width:33%;
+  list-style-type: none;
+}
+
+footer ul li:first-child
+{
+  margin-left : 5px
+}
+
+footer ul li:last-child
+{
+
+ margin-right : -5px
+}
+
+
+footer ul li a:last-child {
+color: #ffffff; }
+
+@media screen and (max-width: 640px) 
+{
+	header { font-size: 25px;
+}	
+
+}

@@ -1,0 +1,91 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;/*Couleur de fond de la page web */
+  color: #cdcdcd; /*Couleur */
+  font-family: "Avenir Next", "Avenir", sans-serif; /*Police d'écriture de la page web*/
+}
+header
+{
+   text-align: center; /*Mettre le titre "Portfolio" au centre*/
+   font-size: 36px; /*Taille police d'écriture*/
+   font-weight: bold ;   
+   color: #ffffff; /*Couleur du texte ici Blanc*/
+   padding:20px;  /*Hauteur de l'en-tête*/
+   top: 0;
+   margin:0; /*Pas de marge prise pour le bandeau d'en-tête*/
+   background-color: #9e794c;/*Couleur de fond du bandeau d'en-tête*/
+}
+h2 {
+transition: transform 0.1s}
+h2:hover /* quand on passe la souris sur l'image */
+{
+transform: scale(1.2); /* taux d'agrandissement */
+}
+
+nav {
+text-align: center; 
+font-size: 25px;
+
+}
+a:hover {
+  color: #9e794c;
+  transform: scale(1.1);
+}
+ a:link {
+      color: #ffffff;
+ }
+a:visited {
+      color: #ffffff;
+}
+
+
+footer /* pieds de page*/
+{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #9e794c;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+footer ul li
+{
+  float: left;
+  width:33%;
+  list-style-type: none;
+}
+
+footer ul li:first-child
+{
+  text-align: left;
+}
+
+footer ul li:last-child
+{
+  float:right;
+  text-align: right;
+}
+h1
+{text-align: center;}
+
+footer ul li a:last-child {
+color: #ffffff; }
+
+
+@media screen and (max-width: 640px) 
+{
+	h2:hover /* quand on passe la souris sur l'image */
+{
+transform: scale(1); /* taux d'agrandissement */
+}
+nav {
+text-align: center; 
+font-size: 20px;
+}
